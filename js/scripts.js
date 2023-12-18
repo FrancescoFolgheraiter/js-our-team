@@ -22,13 +22,25 @@ SVOLGIMENTO
 3)stampo all'interno del dom quello che ho visualizzato in console
 */
 
-//creazione array
+//creazione array- ho la possibilità di creare già l'array con gli oggetti ma preferisco
+//usare la funzione per creare l'oggetto e richiarmarla ogni volta tramite un push
+//per riempire l'array
 let team = [];
-let membro;
-console.log("1team è ", team, typeof team);
+//oggetto 0
 team.push(createTeamObject("Wayne Barnett", "Founder & CEO", "wayne-barnett-founder-ceo.jpg"))
-console.log("2team è ", team, typeof team);
-console.log("prova ", team[0], typeof team[0]);
+//oggetto 1
+team.push(createTeamObject("Angela Caroll", "Chief Editor", "angela-caroll-chief-editor.jpg"))
+//oggetto 2
+team.push(createTeamObject("Walter Gordon", "Office Manager", "walter-gordon-office-manager.jpg"))
+//oggetto 3
+team.push(createTeamObject("Angela Lopez", "Social Media Manager", "angela-lopez-social-media-manager.jpg"))
+//oggetto 4
+team.push(createTeamObject("Scott Estrada", "Developer", "scott-estrada-developer.jpg"))
+//oggetto 5
+team.push(createTeamObject("Barbara Ramos", "Graphic Designer", "barbara-ramos-graphic-designer.jpg"))
+
+
+
 
 
 //FUNCTION
