@@ -39,6 +39,9 @@ team.push(createTeamObject("Scott Estrada", "Developer", "scott-estrada-develope
 //oggetto 5
 team.push(createTeamObject("Barbara Ramos", "Graphic Designer", "barbara-ramos-graphic-designer.jpg"))
 
+//input di dove stampare gli oggetti nel DOM
+let addContentDom = document.querySelector("ul");
+
 //stampa in console di ogni membro del team(key-value)
 //ciclo di lettura array
 for (let i = 0; i < team.length; i++) {
@@ -46,6 +49,11 @@ for (let i = 0; i < team.length; i++) {
     for (const key in team[i]) {
         //stampa in console la variabile key che contiene le key dell'oggetto con il suo valore
         console.log("-"+ key +": "+ team[i][key])
+        addContentDom.innerHTML += `
+            <li>
+               - ${key}: ${team[i][key]}
+            </li>
+        `;
     }
 }
 
