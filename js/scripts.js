@@ -48,12 +48,13 @@ let listMajor = "";
 for (let i = 0; i < team.length; i++) {
     //ciclo di lettura key value dell'oggetto tramite for in
     let listMajor = document.createElement("li");
+    listMajor.classList.add("mb-4")
     let prova = document.createElement("ul");
     for (const key in team[i]) {
         //stampa in console la variabile key che contiene le key dell'oggetto con il suo valore
         console.log("-"+ key +": "+ team[i][key])
         let teamMember = document.createElement("li")
-        teamMember.append("- " + key + ": " + team[i][key])
+        teamMember.append(key + ": " + team[i][key])
         prova.append(teamMember)
     }
     listMajor.append(prova)
