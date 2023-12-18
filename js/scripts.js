@@ -40,25 +40,32 @@ team.push(createTeamObject("Scott Estrada", "Developer", "scott-estrada-develope
 team.push(createTeamObject("Barbara Ramos", "Graphic Designer", "barbara-ramos-graphic-designer.jpg"))
 
 //input di dove stampare gli oggetti nel DOM
-let addContentDom = document.querySelector("ul");
-let listMajor = "";
+let addContentDom = document.querySelector(".row");
 
 //stampa in console di ogni membro del team(key-value)
 //ciclo di lettura array
 for (let i = 0; i < team.length; i++) {
+    //variabile per salvarmi il percorso dell'immagine
+    let arraySupport = [];
     //ciclo di lettura key value dell'oggetto tramite for in
-    let listMajor = document.createElement("li");
-    listMajor.classList.add("mb-4")
-    let prova = document.createElement("ul");
     for (const key in team[i]) {
         //stampa in console la variabile key che contiene le key dell'oggetto con il suo valore
         console.log("-"+ key +": "+ team[i][key])
-        let teamMember = document.createElement("li")
-        teamMember.append(key + ": " + team[i][key])
-        prova.append(teamMember)
+        arraySupport.push(team[i][key])
     }
-    listMajor.append(prova)
-    addContentDom.append(listMajor)
+    addContentDom.innerHTML += `
+        <div class="col-4 text-center mb-3">
+            <div class="my-card p-3">
+                <div class="container-img mb-3">
+                    <img src="./img/${arraySupport[2]}" alt="">
+                </div>
+                <div class="bottom-card p-2">
+                    <h2>${arraySupport[0]}</h2>
+                    <h3>${arraySupport[1]}</h3>
+                </div>
+            </div>
+        </div> 
+    `
 }
 
 
