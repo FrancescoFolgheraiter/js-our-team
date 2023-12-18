@@ -24,6 +24,11 @@ SVOLGIMENTO
 
 //creazione array
 let team = [];
+let membro;
+console.log("1team è ", team, typeof team);
+team.push(createTeamObject("Wayne Barnett", "Founder & CEO", "wayne-barnett-founder-ceo.jpg"))
+console.log("2team è ", team, typeof team);
+console.log("prova ", team[0], typeof team[0]);
 
 
 //FUNCTION
