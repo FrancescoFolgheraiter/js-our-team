@@ -39,6 +39,16 @@ team.push(createTeamObject("Scott Estrada", "Developer", "scott-estrada-develope
 //oggetto 5
 team.push(createTeamObject("Barbara Ramos", "Graphic Designer", "barbara-ramos-graphic-designer.jpg"))
 
+//stampa in console di ogni membro del team(key-value)
+//ciclo di lettura array
+for (let i = 0; i < team.length; i++) {
+    //ciclo di lettura key value dell'oggetto tramite for in
+    for (const key in team[i]) {
+        //stampa in console la variabile key che contiene le key dell'oggetto con il suo valore
+        console.log("-"+ key +": "+ team[i][key])
+    }
+}
+
 
 
 
